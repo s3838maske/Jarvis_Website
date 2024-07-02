@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AI Based Investment And Stock Advisor India - jarvis invest</title>
     <link rel="stylesheet" href="Assets/style.css" />
+    <script src="Assets/index.js"></script>
     <link
       rel="shortcut icon"
       href="https://institution.jarvisinvest.com/assets/images/home/jarvislogo.jpeg"
@@ -18,12 +19,12 @@
       </div>
       <div class="nav-list">
         <a href="#">Home</a>
-        <a href="#"
+        <a href="#" onclick="productList()"
           >Products<img
             src="Assets/images/chevron-down.svg"
             alt="downarrow-svg"
         /></a>
-        <a href="#"
+        <a href="#" onclick="solutionList()"
           >Solutions<img
             src="Assets/images/chevron-down.svg"
             alt="downarrow-svg"
@@ -40,40 +41,159 @@
         <button type="submit">Schedule Demo</button>
       </div>
     </nav>
-<!-- 
-    <div class="product-navlist">
-      <div>Institution</div>
-      <a href="#"><img src="Assets/images/jarvis-api-icon.svg" alt="jarvis api img" />
-        <div>JARVIS APIs</div>
-        <div>
-          Explore our suite of APIs catering to every aspect of the customer
-          journey.
-        </div>
-      </a>
-      <a href="#">
-        <div><img src="Assets/images/jarvis-eat-icon.svg" alt="laptop img" />JARVIS Equity Analytics Terminal</div>
-        <div>
-          A 360º view of everything that affects a stock. Your very own digital
-          Research Analyst
-        </div>
-      </a>
-      <a href="#">
-        <div><img src="Assets/images/jarvis-wls-icon.svg" alt="cookies img" />White Labelled Solutions</div>
-        <div>
-          We empower brands to create a niche for themselves in a crowded
-          industry
-        </div>
-      </a>
-      <a href="#">
-        <div><img src="Assets/images/jarvis-pms-icon.svg" alt="portfolio icon img" />Portfolio Management Solutions</div>
-        <div>
-          Build and manage customized portfolio with an in-built active risk
-          management system
-        </div>
-      </a>
-    </div> -->
 
-    <section class="hero-section">
+    <div class="navbar-dropdown wfull" id="product-dropdown">
+      <div class="dropdown-list product-dropdown wfull">
+        <p class="dropdown-heading">Institution</p>
+        <a href="#">
+          <div class="dropdown-list-heading">
+            <img
+              src="Assets/images/jarvis-api-icon.svg"
+              alt="jarvis api img"
+            />JARVIS APIs
+          </div>
+          <div>
+            <p>
+              Explore our suite of APIs catering to every aspect of the customer
+              journey.
+            </p>
+          </div>
+        </a>
+        <a href="#">
+          <div class="dropdown-list-heading">
+            <img
+              src="Assets/images/jarvis-eat-icon.svg"
+              alt="laptop img"
+            />JARVIS Equity Analytics Terminal
+          </div>
+          <div>
+            <p>
+              A 360º view of everything that affects a stock. Your very own
+              digital Research Analyst
+            </p>
+          </div>
+        </a>
+        <a href="#">
+          <div class="dropdown-list-heading">
+            <img
+              src="Assets/images/jarvis-wls-icon.svg"
+              alt="laptop img"
+            />White Labelled Solutions
+          </div>
+          <div>
+            <p>
+              We empower brands to create a niche for themselves in a crowded
+              industry
+            </p>
+          </div>
+        </a>
+        <a href="#">
+          <div class="dropdown-list-heading">
+            <img
+              src="Assets/images/jarvis-pms-icon.svg"
+              alt="laptop img"
+            />Portfolio Management Solutions
+          </div>
+          <div>
+            <p>
+              Build and manage customized portfolio with an in-built active risk
+              management system
+            </p>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="navbar-dropdown wfull" id="solution-dropdown">
+      <div class="dropdown-list solution-dropdown wfull">
+        <div class="dropdown-flex wfull">
+          <a href="#">
+            <p class="dropdown-heading">Solutions</p>
+            <div class="dropdown-list-heading">
+              <img
+                src="Assets/images/solutions-brokers-icon.svg"
+                alt="jarvis api img"
+              />Brokers
+            </div>
+            <div>
+              <p>
+                Empowering Brokers Through Custom Solutions To Improve
+                Efficiency And Increase Profitability.
+              </p>
+            </div>
+          </a>
+          <a href="#">
+            <div class="dropdown-list-heading">
+              <img
+                src="Assets/images/solutions-wmf-icon.svg"
+                alt="laptop img"
+              />Wealth Management Firms
+            </div>
+            <div>
+              <p>
+                Empowering Wealth Managers With AI To Manage Wealth Even More
+                Efficiently.
+              </p>
+            </div>
+          </a>
+          <a href="#">
+            <div class="dropdown-list-heading">
+              <img
+                src="Assets/images/solutions-robo-icon.svg"
+                alt="laptop img"
+              />Robo Advisors
+            </div>
+            <div>
+              <p>Standout From The Crowd With Our Custom Solutions.</p>
+            </div>
+          </a>
+          <a href="#">
+            <div class="dropdown-list-heading">
+              <img
+                src="Assets/images/solutions-research-icon.svg"
+                alt="laptop img"
+              />Research Advisors
+            </div>
+            <div>
+              <p>Augment Your Research With Our Best In-Class Analytics.</p>
+            </div>
+          </a>
+        </div>
+        <div class="dropdown-flex wfull">
+          <a href="#">
+            <div class="dropdown-list-heading">
+              <img
+                src="Assets/images/solutions-fund-icon.svg"
+                alt="laptop img"
+              />Fund Houses
+            </div>
+            <div>
+              <p>
+                Enhance The Efficacy & Efficiency Of Investment Models With Our
+                Smart Analytics.
+              </p>
+            </div>
+          </a>
+          <a href="#">
+            <div class="dropdown-list-heading">
+              <img
+                src="Assets/images/solutions-treasury-icon.svg"
+                alt="laptop img"
+              />Treasury Desks
+            </div>
+            <div>
+              <p>
+                Increase Profitability And De-Risk Your Investments With The
+                Help Our Curated Solutions
+              </p>
+            </div>
+          </a>
+        </div>
+        <div class="dropdown-flex wfull"></div>
+      </div>
+    </div>
+
+    <section class="hero-section txtCenter">
       <p>REDEFINE THE PARADIGM IN MANAGING YOUR INVESTMENTS</p>
       <h1 class="text-bg">
         <span class="primary-span-text">AI Driven </span>Investment Solutions
@@ -93,5 +213,11 @@
         alt="jarvis video"
       />
     </section>
+
+
+    <section class="analyze-section">
+      
+    </section>
+
   </body>
 </html>

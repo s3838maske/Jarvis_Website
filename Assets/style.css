@@ -1,15 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
 /* CSS Reset Code Started */
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-html , body{
-    height: 100%;
-    width: 100%;
-    font-family: "Inter", sans-serif;
-    
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: "Inter", sans-serif;
 }
 /* CSS Reset Code End */
 /*
@@ -17,136 +17,237 @@ font-family: 'Barlow', sans-serif;
 font-family: 'Barlow Condensed', sans-serif;
  font-family: 'Poppins', sans-serif;
 */
-:root{
-    --font-size:24px;
-    --primary-color:#2b70c5;
-    --secondary-color:#1566d6;
-    --light-color:#fff;
-    --gray-color:#303236;
-    --btn-primary:#0d6efd;
+:root {
+  --font-size: 24px;
+  --primary-color: #2b70c5;
+  --secondary-color: #1566d6;
+  --light-color: #fff;
+  --gray-color: #303236;
+  --btn-primary: #0d6efd;
 }
 
-
-/* Re-used CSS Code Started */
-
-li{
-    list-style-type: none;
+li {
+  list-style-type: none;
 }
 
-a{
-    text-decoration: none;
-    color: var(--gray-color)
+a {
+  text-decoration: none;
+  color: var(--gray-color);
 }
 
 button {
-    padding: 1.2rem;
-    border-radius: 2rem;
-    font-size: 16px;
+  padding: 1.2rem;
+  border-radius: 2rem;
+  font-size: 16px;
+}
+
+/*utility & Re-used CSS Code Started */
+.txtCenter {
+  text-align: center;
 }
 
 .wfull {
-    width: 100%
-}
-.primary-span-text{
-    color: var(--primary-color);
+  width: 100%;
 }
 
-.text-sm{
-    font-size: 22px;
-    font-weight: 500;
+.hfull {
+  height: 100%;
 }
 
-.text-bg{
-    font-size: 67px;
-    font-weight: 600;
-    margin: 1rem 0;
+.primary-span-text {
+  color: var(--primary-color);
+}
+
+.text-sm {
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.text-bg {
+  font-size: 67px;
+  font-weight: 600;
+  margin: 1rem 0;
 }
 /* Re-used CSS Code End */
 
-
 /* navbar code start*/
 
-.navbar{
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    height: 13vh;
-    border-bottom: 1px solid rgb(236, 236, 236);
+.navbar {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 13vh;
+  border-bottom: 1px solid rgb(236, 236, 236);
+  position: absolute;
+  background-color: white;
+  left: 0;
+  top: 0;
+  right: 0;
+  z-index: 1;
 }
 
-.nav-list{
-    display: flex;
-    align-items: center;
+.nav-list {
+  display: flex;
+  align-items: center;
 }
 
-.nav-list a{
-    margin:0 0.8rem;
-    display: flex;
-    font-size: 16px;
-    align-items: center;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
+.nav-list a {
+  margin: 0 0.8rem;
+  display: flex;
+  font-size: 16px;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  /* transition: all 0.3s ease-in-out; */
 }
 
-
-.nav-list a:hover{
-    text-decoration: underline;
-    text-underline-offset: 2.4rem;
-    text-decoration-color: var(--primary-color);
-    text-decoration-thickness: 3px;
+.nav-list a::after {
+  content: "";
+  background-color: #0d6efd;
+  height: 3px;
+  width: calc(100% + 1.6rem);
+  position: absolute;
+  left: -10px;
+  bottom: -35px;
+  opacity: 0;
+  transition: 0.5s;
 }
 
-.nav-list a img{
-    margin: 0 5px;
+.nav-list a:hover::after,
+.nav-list a:focus::after {
+  opacity: 100%;
 }
 
-.nav-list > button[type="submit"]{
-    background-color: var(--secondary-color);
-    color: white;
-    border: none;
-    margin-left: 1rem;
+.nav-list a img {
+  margin: 0 5px;
+}
+
+.nav-list > button[type="submit"] {
+  background-color: var(--secondary-color);
+  color: white;
+  border: none;
+  margin-left: 1rem;
 }
 
 /* navbar code end */
 
-/* main code start*/
+/* navbar dropdown code started */
 
-.hero-section{
-    text-align: center;
-    width: 60%;
-    color: rgba(48, 50, 54, 1);
-    margin: 1.5rem auto;
-    margin-top: 5%;
-
+.navbar-dropdown {
+  background-color: #0d6efd;
+  border: 1px solid rgb(212, 212, 212);
+  border-radius: 5px;
+  position: absolute;
+  top: 13%;
+  box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  display: none;  
 }
 
-.hero-section p:first-child{
-    font-size: 14px;
-    font-weight: 600;
+.dropdown-list {
+  background-color: rgb(255, 255, 255);
+  padding: 4rem 5rem;
 }
 
-.hero-section-btn{
-    background-color: rgb(255, 255, 255);
-    padding: 1.2rem 2.8rem;
-    font-size: 20px;
-    border: 1px solid rgb(185, 185, 185);
-    cursor: pointer;
-    margin: 1.8rem 0;
-    transition: background-color 0.7s ease;
+.dropdown-heading {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.dropdown-list a {
+  margin: 1rem;
+}
+
+.dropdown-list div {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-left: 10px;
+}
+
+.dropdown-list-heading {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.dropdown-list div p {
+  margin-left: 2.4rem;
+  font-size: 14px;
+  padding: 12px 0;
+  color: rgb(103, 110, 118);
+}
+
+.solution-dropdown{
+  padding-top: 11vh;
+  display: flex;
+ gap: 4rem;
 }
 
 
-.hero-section-btn:hover{
-   background-color: var(--secondary-color);
-   border: 1px solid var(--secondary-color);
-   color: white;
+.dropdown-flex{
+    display: flex;
+    flex-direction: column;
 }
-.jarvis-video{
-        padding-left: 42px;
-    padding-right: 42px;
-    /* margin: 0 3%; */
+
+.dropdown-flex a{
+    margin: -1px;
+}
+
+.dropdown-flex > a > p {
+    color:rgb(33, 37, 41);
+    position:absolute;
+    top: 1rem;
+    left: 2rem;
+  
+}
+/* navbar dropdown code Ended */
+
+/* section code started*/
+
+/* hero section code started*/
+
+.hero-section {
+  width: 60%;
+  color: rgba(48, 50, 54, 1);
+  margin: 1.5rem auto;
+  margin-top: 12%;
+}
+
+.hero-section p:first-child {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.hero-section-btn {
+  background-color: rgb(255, 255, 255);
+  padding: 1.2rem 2.8rem;
+  font-size: 20px;
+  border: 1px solid rgb(185, 185, 185);
+  cursor: pointer;
+  margin: 1.8rem 0;
+  transition: background-color 0.7s ease;
+}
+
+.hero-section-btn:hover {
+  background-color: var(--secondary-color);
+  border: 1px solid var(--secondary-color);
+  color: white;
+}
+.jarvis-video {
+  padding-left: 42px;
+  padding-right: 42px;
 }
 
 /* Hero section code end */
 
+/* Analyze code started */
 
+
+
+
+
+
+
+/* Analyze code end */
+
+/* main code end*/
