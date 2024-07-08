@@ -12,18 +12,15 @@ body {
   font-family: "Inter", sans-serif;
 }
 /* CSS Reset Code End */
-/*
-font-family: 'Barlow', sans-serif;
-font-family: 'Barlow Condensed', sans-serif;
- font-family: 'Poppins', sans-serif;
-*/
-:root {
+
+:root {                          
   --font-size: 24px;
   --primary-color: #2b70c5;
   --secondary-color: #1566d6;
   --light-color: #fff;
   --gray-color: #303236;
   --btn-primary: #0d6efd;
+  --section-spacing: 6rem 0;
 }
 
 li {
@@ -36,12 +33,13 @@ a {
 }
 
 button {
-  padding: 1.2rem;
+  padding: 18px 24px;
   border-radius: 2rem;
   font-size: 16px;
 }
 
 /*utility & Re-used CSS Code Started */
+
 .txtCenter {
   text-align: center;
 }
@@ -54,13 +52,18 @@ button {
   height: 100%;
 }
 
-.primary-span-text {
+.active {
+  background-color: var(--primary-color);
+}
+
+.primary-text {
   color: var(--primary-color);
 }
 
 .text-sm {
   font-size: 22px;
   font-weight: 500;
+  margin: 1rem 0;
 }
 
 .text-bg {
@@ -68,15 +71,41 @@ button {
   font-weight: 600;
   margin: 1rem 0;
 }
+
+.jarvis-heading {
+  font-size: 50px;
+  font-weight: 600;
+  margin: 1.3rem 0;
+  color: rgb(48, 50, 54);
+}
+.jarvis-subtitle {
+  font-size: 16px;
+  line-height: 1.5rem;
+  color: rgb(48, 50, 54);
+}
+
+.flex-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2.5rem;
+  gap: 1.5rem;
+}
+
+.section-spancing {
+  padding: var(--section-spacing);
+}
+
 /* Re-used CSS Code End */
 
 /* navbar code start*/
 
 .navbar {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
+  column-gap: 7rem;
   align-items: center;
-  height: 13vh;
+  padding: 1rem 0;
   border-bottom: 1px solid rgb(236, 236, 236);
   position: absolute;
   background-color: white;
@@ -92,13 +121,12 @@ button {
 }
 
 .nav-list a {
-  margin: 0 0.8rem;
+  margin: 0 0.7rem;
   display: flex;
   font-size: 16px;
   align-items: center;
   cursor: pointer;
   position: relative;
-  /* transition: all 0.3s ease-in-out; */
 }
 
 .nav-list a::after {
@@ -107,8 +135,8 @@ button {
   height: 3px;
   width: calc(100% + 1.6rem);
   position: absolute;
-  left: -10px;
-  bottom: -35px;
+  left: -0.9rem;
+  bottom: -2.2rem;
   opacity: 0;
   transition: 0.5s;
 }
@@ -134,18 +162,18 @@ button {
 /* navbar dropdown code started */
 
 .navbar-dropdown {
-  background-color: #0d6efd;
   border: 1px solid rgb(212, 212, 212);
   border-radius: 5px;
   position: absolute;
   top: 13%;
   box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  display: none;  
+  display: none;
+  z-index: 5;
 }
 
 .dropdown-list {
   background-color: rgb(255, 255, 255);
-  padding: 4rem 5rem;
+  padding: 2rem 5rem;
 }
 
 .dropdown-heading {
@@ -177,32 +205,28 @@ button {
   color: rgb(103, 110, 118);
 }
 
-.solution-dropdown{
+.solution-dropdown {
   padding-top: 11vh;
   display: flex;
- gap: 4rem;
+  gap: 4rem;
 }
 
-
-.dropdown-flex{
-    display: flex;
-    flex-direction: column;
+.dropdown-flex {
+  display: flex;
+  flex-direction: column;
 }
 
-.dropdown-flex a{
-    margin: -1px;
+.dropdown-flex a {
+  margin: -1px;
 }
 
 .dropdown-flex > a > p {
-    color:rgb(33, 37, 41);
-    position:absolute;
-    top: 1rem;
-    left: 2rem;
-  
+  color: rgb(33, 37, 41);
+  position: absolute;
+  top: 1rem;
+  left: 2rem;
 }
-/* navbar dropdown code Ended */
-
-/* section code started*/
+/* navbar dropdown code End*/
 
 /* hero section code started*/
 
@@ -242,12 +266,189 @@ button {
 
 /* Analyze code started */
 
+.analyze-section {
+  margin: 0 auto;
+  padding: 12rem 5rem;
+  width: 80%;
+}
 
+.feature-box {
+  height: 11.9rem;
+  margin: 1rem;
+  border-radius: 1rem;
+  padding: 2rem 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgb(208, 214, 218);
+}
 
-
-
-
+.feature-box img {
+  margin-right: 2rem;
+}
 
 /* Analyze code end */
 
-/* main code end*/
+/* why jarvis section code started */
+
+.why-jv-section {
+  background: linear-gradient(
+      0deg,
+      rgba(43, 112, 197, 0.04) 0%,
+      rgba(43, 112, 197, 0.04) 100%
+    ),
+    #fff;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+}
+
+/* why jarvis section code end */
+
+/* serve section code started*/
+.serve-imgs img {
+  width: 100%;
+  margin: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.serve-imgs img:hover {
+  transform: scale(0.8);
+}
+
+/* serve section code end*/
+
+/* partners section code started */
+.logos-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1rem;
+  row-gap: 1rem;
+}
+
+.logo-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 90px;
+  width: 190px;
+  overflow: hidden;
+  border-radius: 15px;
+  border: 1px solid rgb(194, 194, 194);
+}
+
+
+.companys-logo {
+  margin: 7% 9%;
+  column-gap: 1rem;
+  display: flex;
+  overflow-x: scroll;
+  overflow: hidden;
+}
+.companys-logo::-webkit-scrollbar {
+  overflow: hidden;
+}
+
+.slider {
+  position: relative;
+}
+
+.slider-btn {
+  display: none;
+}
+
+.slider-navigation {
+  position: absolute;
+  left: 49%;
+  top: 100%;
+}
+
+.manual-btn {
+  border-radius: 20px;
+  background-color: #cacaca77;
+  padding: 0px 10px;
+  margin-right: 20px;
+  font-size: 10px;
+  cursor: pointer;
+}
+
+#radio-btn1{
+  background-color: #1566d6;
+}
+
+.manual-btn:hover{
+  background-color: #0d6efd;
+}
+
+#btn1:checked ~ .first-slide {
+  transition: 0.8s;
+}
+
+#btn2:checked ~ .first-slide {
+  margin-left: -100%;
+  transition: 0.8s;
+}
+/* partners section code end */
+
+/* Collaborator section code started */
+
+.collaborator-section {
+  padding: calc(var(--section-spacing)-4rem);
+}
+
+.collab-img-flex {
+  display: flex;
+  justify-content: center;
+  margin: 5% 17%;
+  gap: 2rem;
+  row-gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.collab-logo img {
+  filter: grayscale(1);
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+}
+.collab-logo img:hover {
+  filter: grayscale(0);
+  transform: scale(1.1);
+}
+
+/* Collaborator section code End*/
+
+/* media section code started */
+
+.media-img-flex {
+  display: flex;
+  margin-block: 5%;
+  margin-inline: 22%;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  row-gap: 2rem;
+  column-gap: 1.5rem;
+}
+
+.media-logo {
+  display: flex;
+  justify-content: center;
+  width: 12vw;
+}
+
+.media-logo img {
+  height: 60px;
+  filter: grayscale(100%);
+}
+
+/* media section code end */
+
+/* contact section code started */
+
+
+
+/* contact section code End */
+
