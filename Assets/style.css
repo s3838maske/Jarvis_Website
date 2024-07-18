@@ -13,14 +13,14 @@ body {
 }
 /* CSS Reset Code End */
 
-:root {                          
-  --font-size: 24px;
+:root {
+  --small-font-size: 14px;
   --primary-color: #2b70c5;
   --secondary-color: #1566d6;
   --light-color: #fff;
   --gray-color: #303236;
   --btn-primary: #0d6efd;
-  --section-spacing: 6rem 0;
+  --section-spacing: 6rem 0rem;
 }
 
 li {
@@ -52,10 +52,6 @@ button {
   height: 100%;
 }
 
-.active {
-  background-color: var(--primary-color);
-}
-
 .primary-text {
   color: var(--primary-color);
 }
@@ -69,7 +65,12 @@ button {
 .text-bg {
   font-size: 67px;
   font-weight: 600;
+  letter-spacing: -2px;
   margin: 1rem 0;
+}
+
+.small-font {
+  font-size: var(--small-font-size);
 }
 
 .jarvis-heading {
@@ -84,12 +85,21 @@ button {
   color: rgb(48, 50, 54);
 }
 
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
 .flex-row {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-top: 2.5rem;
   gap: 1.5rem;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
 }
 
 .section-spancing {
@@ -105,14 +115,14 @@ button {
   justify-content: center;
   column-gap: 7rem;
   align-items: center;
-  padding: 1rem 0;
+  padding: 2vh 0;
   border-bottom: 1px solid rgb(236, 236, 236);
   position: absolute;
   background-color: white;
   left: 0;
   top: 0;
   right: 0;
-  z-index: 1;
+  z-index: 7;
 }
 
 .nav-list {
@@ -120,7 +130,7 @@ button {
   align-items: center;
 }
 
-.nav-list a {
+.nav-list a{
   margin: 0 0.7rem;
   display: flex;
   font-size: 16px;
@@ -129,25 +139,32 @@ button {
   position: relative;
 }
 
-.nav-list a::after {
+.nav-list a::after{
   content: "";
   background-color: #0d6efd;
   height: 3px;
-  width: calc(100% + 1.6rem);
   position: absolute;
-  left: -0.9rem;
-  bottom: -2.2rem;
-  opacity: 0;
+  left: 50%;
+  bottom: -2.1rem;
+  transform: translateX(-50%);
   transition: 0.5s;
+  visibility: hidden;
+  opacity: 100%;
+  width: 0;
 }
 
 .nav-list a:hover::after,
 .nav-list a:focus::after {
-  opacity: 100%;
+  visibility: visible;
+  width: calc(100% + 1.4rem);
 }
 
 .nav-list a img {
   margin: 0 5px;
+  transition: 0.5s ease-in-out;
+}
+.nav-list a:hover img,.nav-list a:focus img{
+  transform: rotate(181deg);
 }
 
 .nav-list > button[type="submit"] {
@@ -155,6 +172,10 @@ button {
   color: white;
   border: none;
   margin-left: 1rem;
+}
+
+.menu-btn-svg{
+  display: none;
 }
 
 /* navbar code end */
@@ -165,7 +186,7 @@ button {
   border: 1px solid rgb(212, 212, 212);
   border-radius: 5px;
   position: absolute;
-  top: 13%;
+  top: 12%;
   box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   display: none;
   z-index: 5;
@@ -234,7 +255,7 @@ button {
   width: 60%;
   color: rgba(48, 50, 54, 1);
   margin: 1.5rem auto;
-  margin-top: 12%;
+  margin-top: 25vh;
 }
 
 .hero-section p:first-child {
@@ -273,7 +294,7 @@ button {
 }
 
 .feature-box {
-  height: 11.9rem;
+  height: 27vh;
   margin: 1rem;
   border-radius: 1rem;
   padding: 2rem 3rem;
@@ -301,8 +322,8 @@ button {
 }
 
 .container {
-  width: 80%;
-  margin: auto;
+  width: 75%;
+  margin: 0 auto;
 }
 
 /* why jarvis section code end */
@@ -312,11 +333,20 @@ button {
   width: 100%;
   margin: 10px;
   cursor: pointer;
-  transition: all 0.2s ease-in-out;
+}
+.serve-imgs div img:nth-child(1),
+.serve-imgs div img:nth-child(2) {
+  transition: opacity 0.3s ease, transform 0.5s ease;
 }
 
-.serve-imgs img:hover {
-  transform: scale(0.8);
+.posi-ab img:hover {
+  transform: scale(0.9);
+  opacity: 0;
+}
+
+.posi-ab {
+  top: -30px;
+  position: absolute;
 }
 
 /* serve section code end*/
@@ -340,7 +370,6 @@ button {
   border: 1px solid rgb(194, 194, 194);
 }
 
-
 .companys-logo {
   margin: 7% 9%;
   column-gap: 1rem;
@@ -348,6 +377,7 @@ button {
   overflow-x: scroll;
   overflow: hidden;
 }
+
 .companys-logo::-webkit-scrollbar {
   overflow: hidden;
 }
@@ -375,34 +405,33 @@ button {
   cursor: pointer;
 }
 
-#radio-btn1{
+#radio-btn1 {
   background-color: #1566d6;
 }
 
-.manual-btn:hover{
+.manual-btn:hover {
   background-color: #0d6efd;
 }
 
 #btn1:checked ~ .first-slide {
-  transition: 0.8s;
+  transition: 0.8s ease-in-out;
+  /* background-color: #0056b3; */
 }
 
 #btn2:checked ~ .first-slide {
   margin-left: -100%;
-  transition: 0.8s;
+  transition: 0.8s ease-in-out;
+  /* background-color: #0056b3; */
 }
+
 /* partners section code end */
 
 /* Collaborator section code started */
 
-.collaborator-section {
-  padding: calc(var(--section-spacing)-4rem);
-}
-
 .collab-img-flex {
   display: flex;
   justify-content: center;
-  margin: 5% 17%;
+  margin: 5% 20rem;
   gap: 2rem;
   row-gap: 1rem;
   flex-wrap: wrap;
@@ -448,7 +477,197 @@ button {
 
 /* contact section code started */
 
+.contact-container {
+  display: flex;
+  width: 78vw;
+  height: 97vh;
+  margin: 5% auto;
+  overflow: hidden;
+}
 
+.contact-left-div {
+  display: flex;
+  color: white;
+  flex-direction: column;
+  background-color: rgb(21, 102, 214);
+  justify-content: center;
+  row-gap: 1rem;
+  padding-inline: 2.5rem;
+  height: 100%;
+  width: 29%;
+  border-radius: 17px 0 0 17px;
+}
+
+.phone-icon-box {
+  background-color: rgba(255, 255, 255, 0.274);
+  padding: 2.5rem;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+.contact-right-div {
+  width: 80%;
+  /* height: 100%; */
+  background-color: rgb(253, 253, 253);
+  border-radius: 0 17px 17px 0;
+  border: 1px solid rgba(159, 182, 231, 0.774);
+  padding: 3.2rem 5rem;
+}
+
+.contact-label {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.contact-label input[type="checkbox"]{
+  display: none;
+}
+.contact-label label {
+  color: white;
+  /* background-color: rgb(255, 255, 255); */
+  margin-right: 1rem;
+  margin-block: 5px;
+  padding: 0.5rem 0.8rem;
+  font-size: 15px;
+  color: rgb(114, 114, 114);
+  border: 1px solid rgb(197, 197, 197);
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.contact-label {
+  margin-bottom: 50px;
+}
+
+.form-row input {
+  width: 21rem;
+  font-size: 16px;
+  padding: 15px 16px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ececec;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+textarea {
+  resize: vertical;
+  margin: 15px 0;
+  width: 100%;
+  height: 110px;
+  padding: 10px;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  color: #333;
+  border: 1px solid #ececec;
+  border-radius: 5px;
+  outline: none;
+}
+
+.form-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+input[type="submit"] {
+  width: 100%;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 20px 0;
+  background-color: rgb(22, 98, 212);
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+input[type="checkbox"]:checked + label{
+  background-color: #006cdf;
+  color: white;
+  border: #006cdf;;
+}
 
 /* contact section code End */
 
+/* footer section code started */
+
+.footer-section {
+  background: linear-gradient(
+      0deg,
+      rgba(21, 102, 214, 0.04) 0%,
+      rgba(21, 102, 214, 0.04) 100%
+    ),
+    #fff;
+  padding-bottom: 0;
+}
+
+.footer-head {
+  margin-top: -1rem;
+  padding-bottom: 20px;
+  line-height: 30px;
+  border-bottom: 1px solid rgb(206, 206, 206);
+}
+
+.footer-head div:nth-child(2) {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.footer-list {
+  align-items: start;
+  margin-bottom: 7rem;
+}
+
+.footer-list p {
+  font-size: 16px;
+  font-weight: 600;
+  color: rgb(48, 50, 54);
+}
+
+.footer-address li{
+  font-size: 16px !important;
+  font-weight: 400 !important;
+}
+
+.footer-list li {
+  font-size: 14px;
+  font-weight: 500;
+  color: rgb(116, 116, 116);
+  margin-block: 20px;
+  display: flex;
+  align-items: center;
+  column-gap: 15px;
+}
+
+li ion-icon {
+  font-size: 18px;
+}
+
+.footer-nth-last div:nth-child(2) {
+  justify-content: left;
+  margin-top: 1rem;
+  color: rgb(48, 50, 54);
+}
+
+.footer-bottom {
+  /* margin-inline:-4vw ; */
+  background: linear-gradient(
+      0deg,
+      rgba(21, 102, 214, 0.12) 0%,
+      rgba(21, 102, 214, 0.12) 100%
+    ),
+    #fff;
+  padding: 3rem 2rem;
+  display: flex;
+  justify-content: space-around;
+  gap: 35%;
+  color: rgb(48, 50, 54);
+  margin-top: 2rem;
+}
+/* footer section code end */

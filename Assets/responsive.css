@@ -1,0 +1,237 @@
+@media only screen and (max-width: 700px) {
+  .text-sm {
+    font-weight: 400;
+    font-size: 1rem;
+  }
+
+  .jarvis-subtitle {
+    font-size: 1rem;
+  }
+
+  .section-spancing {
+    padding: 4rem 0;
+  }
+
+  /* navbar code started */
+  .menu-btn-svg {
+    display: block;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    align-items: flex-start;
+    position: absolute;
+    transition: 0.5s ease-in-out;
+    top: 60px;
+    height: 0;
+    overflow: hidden;
+    left: 0px;
+  }
+
+  .nav-list a{
+    margin: 1rem 0.5rem;
+  }
+
+
+  .navbar {
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+    position: fixed;
+  }
+
+  .nav-list > button[type="submit"] {
+    width: 90%;
+    margin-left: 1rem;
+    padding: 0.8rem;
+  }
+
+  
+.nav-list a:hover::after,
+.nav-list a:focus::after {
+  visibility: hidden;
+}
+
+  /* navbar code end */
+
+  /* hero section code started */
+
+  .hero-section {
+    width: 95%;
+    margin-top: 12vh;
+  }
+
+  .hero-section p {
+    font-size: 1rem;
+  }
+  .hero-section p:first-child {
+    font-weight: 500;
+  }
+
+  .hero-section h1 {
+    font-size: 2.2rem;
+    margin-block: 1rem;
+  }
+
+  .hero-section-btn {
+    padding: 1rem 1.7rem;
+    font-size: 1.2rem;
+  }
+  /* hero section code end */
+
+  /* serve code start */
+  .serve-imgs {
+    flex-wrap: wrap;
+  }
+  /* serve code end */
+
+  /* analyze code start */
+  .analyze-feature {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .analyze-section {
+    padding: 0vh 0vw;
+    width: 92%;
+  }
+
+  .feature-box {
+    height: 18vh;
+    padding: 2rem 1rem;
+    background-color: white !important;
+    margin: 1rem 0;
+  }
+
+  .feature-box-heading {
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+
+  .right-img img {
+    width: 100%;
+  }
+
+  /* analyze code end*/
+
+  /* jarvis video section code started */
+  .jarvis-video {
+    padding: 0px;
+    margin-bottom: 17vh;
+  }
+  /* jarvis video section code end */
+
+  /* why jv section code started */
+  .why-jv-section {
+    text-align: center;
+  }
+  .jarvis-heading {
+    font-size: 28px;
+  }
+
+  .why-jv div {
+    width: 100%;
+  }
+
+  /* why jv section code end */
+
+  /* jarvis partner section started */
+
+  .logos-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    row-gap: 1.8rem;
+    margin-top: 5rem;
+    margin-right: 1rem;
+  }
+
+  .logo-div {
+    height: 90px;
+    /* width: 100%; */
+    border: none;
+  }
+
+  /* jarvis partner section end */
+
+  /* collaborative section code started */
+
+  .collab-img-flex {
+    margin: 0;
+  }
+
+  /* collaborative section code End */
+
+  /* media section code started*/
+
+  .media-img-flex {
+    margin-block: 5%;
+    margin-inline: 10%;
+    justify-content: space-around;
+  }
+
+  .media-logo {
+    width: 25vw;
+  }
+
+  .media-logo img {
+    height: 3.5rem;
+  }
+
+  /* media section code end*/
+  /* contact section code started */
+
+  .contact-container {
+    flex-direction: column;
+    height: 100%;
+    width: 90%;
+    margin: 3% auto;
+  }
+
+  .phone-icon-box {
+    padding: 1rem 0.3rem;
+    border-radius: 50%;
+    margin-left: -10px;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .phone-icon-box img{
+    width: 60%;
+  }
+
+  .contact-left-div {
+    width: 100%;
+    border-radius: 17px 17px 0 0;
+    box-sizing: border-box;
+  }
+
+  .contact-right-div {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1rem;
+    border-radius: 0 0 17px 17px;
+  }
+
+  .form-row input {
+    border: 1px solid #ececec;
+  }
+
+  .form-row {
+    display: flex;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+  }
+
+  /* contact section code end */
+  /* footer section  */
+
+  .footer-list li {
+    column-gap: 10px;
+  }
+
+  li ion-icon {
+    font-size: 20px;
+  }
+}

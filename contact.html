@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Based Investment And Stock Advisor India - jarvis invest</title>
+    <link rel="stylesheet" href="Assets/style.css" />
+    <link rel="stylesheet" href="Assets/responsive.css" />
+    <script src="Assets/index.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+
+    <link
+      rel="shortcut icon"
+      href="Assets/images/jarvislogo.jpeg"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="nav-logo">
+        <img src="Assets/images/Jarvis-logo.svg" alt="Jarvis logo" />
+      </div>
+      <div class="nav-list" id="nav-list">
+        <a href="index.html">Home</a>
+        <a href="#" onclick="productList()"
+          >Products<img
+            src="Assets/images/chevron-down.svg"
+            alt="downarrow-svg"
+        /></a>
+        <a href="#" onclick="solutionList()"
+          >Solutions<img
+            src="Assets/images/chevron-down.svg"
+            alt="downarrow-svg"
+        /></a>
+        <a href="#">Company</a>
+        <a href="#">Library</a>
+        <a href="#">Media</a>
+        <a href="#">Contact Us</a>
+        <a href="#"
+          ><img src="Assets/images/retail-icon.svg" alt="" /> Retail<img
+            src="Assets/images/right-arrow-icon.svg"
+            alt="rightarrow-svg"
+        /></a>
+        <button type="submit">Schedule Demo</button>
+      </div>
+      <img
+        class="menu-btn-svg"
+        id="menu-btn-svg"
+        onclick="dropMenu()"
+        src="Assets/images/menu.svg"
+        alt="menu-btn-svg"
+      />
+    </nav>
+
+    <!-- Navbar product list dropdown code  started-->
+    <div class="navbar-dropdown wfull" id="product-dropdown">
+      <div class="dropdown-list product-dropdown wfull">
+        <p class="dropdown-heading">Institution</p>
+        <a href="#">
+          <div class="dropdown-list-heading">
+            <img
+              src="Assets/images/jarvis-api-icon.svg"
+              alt="jarvis api img"
+            />JARVIS APIs
+          </div>
+          <div>
+            <p>
+              Explore our suite of APIs catering to every aspect of the customer
+              journey.
+            </p>
+          </div>
+        </a>
+        <a href="#">
+          <div class="dropdown-list-heading">
+            <img
+              src="Assets/images/jarvis-eat-icon.svg"
+              alt="laptop img"
+            />JARVIS Equity Analytics Terminal
+          </div>
+          <div>
+            <p>
+              A 360º view of everything that affects a stock. Your very own
+              digital Research Analyst
+            </p>
+          </div>
+        </a>
+        <a href="#">
+          <div class="dropdown-list-heading">
+            <img
+              src="Assets/images/jarvis-wls-icon.svg"
+              alt="laptop img"
+            />White Labelled Solutions
+          </div>
+          <div>
+            <p>
+              We empower brands to create a niche for themselves in a crowded
+              industry
+            </p>
+          </div>
+        </a>
+        <a href="#">
+          <div class="dropdown-list-heading">
+            <img
+              src="Assets/images/jarvis-pms-icon.svg"
+              alt="laptop img"
+            />Portfolio Management Solutions
+          </div>
+          <div>
+            <p>
+              Build and manage customized portfolio with an in-built active risk
+              management system
+            </p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <!-- Navbar product list dropdown code end -->
+
+    <!-- Navbar solution list dropdown code  started-->
+    <div class="navbar-dropdown wfull" id="solution-dropdown">
+      <div class="dropdown-list solution-dropdown wfull">
+        <div class="dropdown-flex wfull">
+          <a href="#">
+            <p class="dropdown-heading">Solutions</p>
+            <div class="dropdown-list-heading">
+              <img
+                src="Assets/images/solutions-brokers-icon.svg"
+                alt="jarvis api img"
+              />Brokers
+            </div>
+            <div>
+              <p>
+                Empowering Brokers Through Custom Solutions To Improve
+                Efficiency And Increase Profitability.
+              </p>
+            </div>
+          </a>
+          <a href="#">
+            <div class="dropdown-list-heading">
+              <img
+                src="Assets/images/solutions-wmf-icon.svg"
+                alt="laptop img"
+              />Wealth Management Firms
+            </div>
+            <div>
+              <p>
+                Empowering Wealth Managers With AI To Manage Wealth Even More
+                Efficiently.
+              </p>
+            </div>
+          </a>
+          <a href="#">
+            <div class="dropdown-list-heading">
+              <img
+                src="Assets/images/solutions-robo-icon.svg"
+                alt="laptop img"
+              />Robo Advisors
+            </div>
+            <div>
+              <p>Standout From The Crowd With Our Custom Solutions.</p>
+            </div>
+          </a>
+          <a href="#">
+            <div class="dropdown-list-heading">
+              <img
+                src="Assets/images/solutions-research-icon.svg"
+                alt="laptop img"
+              />Research Advisors
+            </div>
+            <div>
+              <p>Augment Your Research With Our Best In-Class Analytics.</p>
+            </div>
+          </a>
+        </div>
+        <div class="dropdown-flex wfull">
+          <a href="#">
+            <div class="dropdown-list-heading">
+              <img
+                src="Assets/images/solutions-fund-icon.svg"
+                alt="laptop img"
+              />Fund Houses
+            </div>
+            <div>
+              <p>
+                Enhance The Efficacy & Efficiency Of Investment Models With Our
+                Smart Analytics.
+              </p>
+            </div>
+          </a>
+          <a href="#">
+            <div class="dropdown-list-heading">
+              <img
+                src="Assets/images/solutions-treasury-icon.svg"
+                alt="laptop img"
+              />Treasury Desks
+            </div>
+            <div>
+              <p>
+                Increase Profitability And De-Risk Your Investments With The
+                Help Our Curated Solutions
+              </p>
+            </div>
+          </a>
+        </div>
+        <div class="dropdown-flex wfull"></div>
+      </div>
+    </div>
+    <!-- Navbar solution list dropdown code  end-->
+
+    <section class="contact-section flex-wrap section-spancing">
+      <div class="contact-container">
+        <div class="contact-left-div">
+          <div class="phone-icon-box">
+            <img src="Assets/images/phone-icon.svg" alt="phone-icon" />
+          </div>
+          <div class="jarvis-heading" style="color: white">Get A Call Back</div>
+          <div class="text-sm" style="font-weight: 400">
+            Fill This Form And We Will Get Back To You Within 24 Hours
+          </div>
+        </div>
+
+        <div class="contact-right-div">
+          <form id="contact-form">
+            <label for="">We are</label>
+            <div class="contact-label" id="contact-label">
+              <input type="checkbox" name="Broker" id="Broker" value="Broker" />
+              <label for="Broker">Broker</label>
+
+              <input type="checkbox" name="WMF" id="WMF" value="WMF" />
+              <label for="WMF">Wealth Management Firms</label>
+              
+              <input type="checkbox" name="RoboA" id="RoboA" value="RoboA" />
+              <label for="RoboA">Robo Advisors</label>
+
+              <input
+              type="checkbox"
+              name="reAdvisor"
+              id="reAdvisor"
+              value="reAdvisor"
+              />
+              <label for="reAdvisor">Research Advisors</label>
+
+              <input type="checkbox" name="TD" id="TD" value="TD" />
+              <label for="TD">Treasury Desk</label>
+              
+              <input
+              type="checkbox"
+              name="Fund-house"
+              id="Fund-house"
+              value="Fund-house"
+              />
+              <label for="Fund-house">Fund Houses</label>
+            </div>
+
+            <div class="form-row">
+              <div class="wfull">
+                <label class="small-font" for="firstName">First Name:</label>
+                <input
+                  type="text"
+                  id="firstName"
+                  name="firstName"
+                  placeholder="First Name"
+                />
+              </div>
+              <div>
+                <label class="small-font" for="lastName">Last Name:</label>
+                <input
+                  type="text"
+                  id="lastName"
+                  name="lastName"
+                  placeholder="Last Name"
+                />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="wfull">
+                <label class="small-font" for="email">Email Address</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="you@Company.com"
+                />
+              </div>
+              <div>
+                <label class="small-font" for="phone-no">Phone number</label>
+                <input
+                  type="text"
+                  id="phone-no"
+                  name="phone-no"
+                  placeholder="+91 (1234) 456-7890"
+                />
+              </div>
+            </div>
+
+            <div class="flex-column wfull">
+              <label class="small-font" for="message"
+                >How can we help? (Optional):</label
+              >
+              <textarea
+                id="message"
+                name="message"
+                placeholder="Tell us a little about the project..."
+              ></textarea>
+            </div>
+            <input type="submit" value="Get started">
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer-section section-spancing">
+      <div class="container">
+        <div class="flex-row flex-wrap footer-head">
+          <div><img src="Assets/images/Jarvis-logo.svg" alt="" /></div>
+          <div class="text-sm">
+            The AI Based Autonomous Global Market <br />
+            Research & Analytics Platform
+          </div>
+        </div>
+
+        <div class="footer-list flex-row flex-wrap">
+          <div class="footer-product">
+            <p>Product</p>
+            <ul>
+              <li>JARVIS APIs</li>
+              <li>JARVIS Equity Analytics Terminal</li>
+              <li>White Labelled Solutions</li>
+              <li>Portfolio Management Solutions</li>
+            </ul>
+          </div>
+          <div class="footer-solution">
+            <p>Solution</p>
+            <ul>
+              <li>Broker</li>
+              <li>Wealth Management Firms</li>
+              <li>Robo Advisors</li>
+              <li>Research Advisors</li>
+              <li>Treasury Desks</li>
+              <li>Fund Houses</li>
+            </ul>
+          </div>
+
+          <div class="footer-address">
+            <p>India</p>
+            <li>
+              7th floor, Dheeraj Kawal, Lal Bahadur Shashtri Road, Vikhroli
+              <br />
+              West, Mumbai, Maharashtra 400079
+            </li>
+            <li>
+              <ion-icon name="mail-outline"></ion-icon
+              >customersupport@jarvisinvest.com
+            </li>
+            <li>
+              <ion-icon name="time-outline"></ion-icon>Mon - Sat | 09:00 AM -
+              08:00 PM (Sunday Closed)
+            </li>
+            <li>
+              <iframe width="100%" height="5%"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3769.944139848257!2d72.92292591027483!3d19.110106350827287!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b90870791cc1%3A0x840a4c0deca2d831!2sJARVIS%20INVEST!5e0!3m2!1sen!2sin!4v1721239752204!5m2!1sen!2sin"
+                width="600"
+                height="450"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </li>
+          </div>
+        </div>
+
+        <div class="flex-row">
+          <div class="footer-nth-last">
+            <p>BSAL Membership</p>
+            <div class="flex-row">
+              <img
+                src="https://institution.jarvisinvest.com/assets/images/general/bsal.svg"
+                alt=""
+              />
+              <h3>1560</h3>
+            </div>
+          </div>
+          <div class="footer-nth-last">
+            <p>SEBI Registered Investment Advisor</p>
+            <div class="flex-row" style="justify-content: right">
+              <img
+                src="https://institution.jarvisinvest.com/assets/images/general/SEBI.png"
+                alt=""
+              />
+              <h3>INA 000013235</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>Ventugrow Consultants Pvt. Ltd.</div>
+        <div>© 2023 All Rights Reserved</div>
+      </div>
+    </footer>
+  </body>
+</html>
