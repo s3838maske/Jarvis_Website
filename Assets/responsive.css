@@ -97,7 +97,7 @@
   }
 
   .feature-box {
-    height: 18vh;
+    height: 100%;
     padding: 2rem 1rem;
     background-color: white !important;
     margin: 1rem 0;
@@ -147,7 +147,7 @@
 
   .logo-div {
     height: 90px;
-    /* width: 100%; */
+    width: 9rem;
     border: none;
   }
 
@@ -216,6 +216,7 @@
 
   .form-row input {
     border: 1px solid #ececec;
+    width: 100%;
   }
 
   .form-row {
