@@ -8,8 +8,10 @@
     font-size: 1rem;
   }
 
-  .section-spancing {
-    padding: 4rem 0;
+
+
+  .container {
+    width: 90%;
   }
 
   /* navbar code started */
@@ -30,10 +32,9 @@
     left: 0px;
   }
 
-  .nav-list a{
+  .nav-list a {
     margin: 1rem 0.5rem;
   }
-
 
   .navbar {
     justify-content: space-between;
@@ -47,11 +48,10 @@
     padding: 0.8rem;
   }
 
-  
-.nav-list a:hover::after,
-.nav-list a:focus::after {
-  visibility: hidden;
-}
+  .nav-list a:hover::after,
+  .nav-list a:focus::after {
+    visibility: hidden;
+  }
 
   /* navbar code end */
 
@@ -59,7 +59,7 @@
 
   .hero-section {
     width: 95%;
-    margin-top: 12vh;
+    margin-top: 15vh;
   }
 
   .hero-section p {
@@ -125,6 +125,9 @@
   .why-jv-section {
     text-align: center;
   }
+  .why-jv-section > .container {
+    width: 90%;
+  }
   .jarvis-heading {
     font-size: 28px;
   }
@@ -135,7 +138,7 @@
 
   /* why jv section code end */
 
-  /* jarvis partner section started */
+  /* partner section started */
 
   .logos-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -151,7 +154,11 @@
     border: none;
   }
 
-  /* jarvis partner section end */
+  .companys-logo {
+    gap: 1.2rem;
+  }
+
+  /* partner section end */
 
   /* collaborative section code started */
 
@@ -188,15 +195,16 @@
   }
 
   .phone-icon-box {
-    padding: 1rem 0.3rem;
+    padding: 1.2rem 0.3rem;
     border-radius: 50%;
     margin-left: -10px;
     margin-top: 1rem;
     display: flex;
     justify-content: center;
+    margin-bottom: 2rem;
   }
-  
-  .phone-icon-box img{
+
+  .phone-icon-box img {
     width: 60%;
   }
 
@@ -204,6 +212,13 @@
     width: 100%;
     border-radius: 17px 17px 0 0;
     box-sizing: border-box;
+    padding-inline: 1.5rem;
+  }
+
+  .contact-left-div > .jarvis-heading{
+    margin: -1rem 0;
+    font-size: 2.3rem;
+
   }
 
   .contact-right-div {
