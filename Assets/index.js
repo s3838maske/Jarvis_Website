@@ -6,7 +6,7 @@ function dropMenu() {
   if (quntity == 1) {
     navList.style.height = "480px";
     quntity = 0;
-    // console.log("0")
+    // console.log("0")   
   } else if (quntity == 0) {
     navList.style.height = "0px";
     quntity = 1;
